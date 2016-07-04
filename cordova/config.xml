@@ -10,8 +10,7 @@
   <plugin name="cordova-plugin-dialogs" version="1.2.1" />
   <plugin name="cordova-plugin-network-information" version="1.2.1" />
   <plugin name="cordova-plugin-whitelist" spec="1" />
-  <plugin name="okstate-plugin-camera-overlay" spec="https://github.com/wkevina/okstate-plugin-camera-overlay.git" />
-  <plugin name="cordova-plugin-camerapreview" spec="0.9.0" />
+  <plugin name="phonegap-plugin-barcodescanner" version="4.0.0" />
   <access origin="*" />
   <allow-intent href="http://*/*" />
   <platform name="android">

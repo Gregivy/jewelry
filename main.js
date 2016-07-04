@@ -17,15 +17,21 @@ document.addEventListener("offline", function () {
 
 var page = new tabris.Page({
   topLevel: true,
+  background: "transparent",
   title: "myapp"
 });
 
-new tabris.Button({
+var button = new tabris.Button({
   layoutData: {left: 10, top: 10},
   text: "Button"
 }).on("select", function() {
-	console.log(tabris.app.getResourceLocation('pic.png'));
-  navigator.camera.getPicture(function (){},function () {}, {overlayImageURL:tabris.app.getResourceLocation('pic.png')})
+	fetch("./test.html").then(function(response) {
+		return response.text();
+	}).then(function(text) {
+		var webview = new tabris.WebView({
+		  layoutData: {left: 0, top: [button,0], right: 0, bottom: 0}
+		}).set('html',text).appendTo(page);
+	});
 }).appendTo(page);
 
 page.open();
