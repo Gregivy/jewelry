@@ -24,7 +24,8 @@ new tabris.Button({
   layoutData: {left: 10, top: 10},
   text: "Button"
 }).on("select", function() {
-  navigator.camera.getPicture(function (){},function () {}, {overlayImageURL:'./images/logo.jpg'})
+	console.log(tabris.app.getResourceLocation('pic.png'));
+  navigator.camera.getPicture(function (){},function () {}, {overlayImageURL:tabris.app.getResourceLocation('pic.png')})
 }).appendTo(page);
 
 page.open();
