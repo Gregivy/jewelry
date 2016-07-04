@@ -21,11 +21,11 @@
         <icon src="res/android/mipmap-xhdpi/ic_launcher.png" density="xhdpi" />
         <icon src="res/android/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi" />
         <icon src="res/android/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi" />
+        <config-file target="AndroidManifest.xml" parent="/*">
+          <uses-permission android:name="android.permission.CAMERA" />
+          <uses-feature
+            android:name="android.hardware.camera"
+            android:required="true" />
+        </config-file>
   </platform>
-  <config-file target="AndroidManifest.xml" parent="/*">
-        <uses-permission android:name="android.permission.CAMERA" />
-        <uses-feature
-          android:name="android.hardware.camera"
-          android:required="true" />
-  </config-file>
 </widget>
