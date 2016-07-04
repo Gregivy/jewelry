@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="1" android-packageName="com.jewelry" id="com.jewelry" version="1.0.0">
+  <name>Jewelry Tester</name>
+  <description>
+    App for testing jewelry using camera
+  </description>
+  <author email="gpoi@mail.ru" href="https://vk.com/gregp">
+   Plyusch Gregory
+  </author>
+  <plugin name="cordova-plugin-dialogs" version="1.2.1" />
+  <plugin name="cordova-plugin-network-information" version="1.2.1" />
+  <plugin name="cordova-plugin-whitelist" spec="1" />
+  <plugin name="okstate-plugin-camera-overlay" spec="https://github.com/wkevina/okstate-plugin-camera-overlay.git" />
+  <access origin="*" />
+  <allow-intent href="http://*/*" />
+  <platform name="android">
+        <icon src="res/android/mipmap-ldpi/ic_launcher.png" density="ldpi" />
+        <icon src="res/android/mipmap-mdpi/ic_launcher.png" density="mdpi" />
+        <icon src="res/android/mipmap-hdpi/ic_launcher.png" density="hdpi" />
+        <icon src="res/android/mipmap-xhdpi/ic_launcher.png" density="xhdpi" />
+        <icon src="res/android/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi" />
+        <icon src="res/android/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi" />
+    </platform>
+</widget>

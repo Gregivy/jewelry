@@ -1,0 +1,8 @@
+{
+  "name": "jewelry",
+  "description": "Jewelry tester",
+  "main": "main.js",
+  "dependencies": {
+    "tabris": "^1.8.0"
+  }
+}
