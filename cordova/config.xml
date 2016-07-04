@@ -7,11 +7,11 @@
   <author email="gpoi@mail.ru" href="https://vk.com/gregp">
    Plyusch Gregory
   </author>
-  <hook type="before_build" src="appBeforeBuild.js" />
   <plugin name="cordova-plugin-dialogs" version="1.2.1" />
   <plugin name="cordova-plugin-network-information" version="1.2.1" />
   <plugin name="cordova-plugin-whitelist" spec="1" />
   <plugin name="phonegap-plugin-barcodescanner" version="4.0.0" />
+  <plugin name="cordova-plugin-settings-hook" spec="~0.2.3" />
   <access origin="*" />
   <allow-intent href="http://*/*" />
   <platform name="android">
@@ -21,5 +21,11 @@
         <icon src="res/android/mipmap-xhdpi/ic_launcher.png" density="xhdpi" />
         <icon src="res/android/mipmap-xxhdpi/ic_launcher.png" density="xxhdpi" />
         <icon src="res/android/mipmap-xxxhdpi/ic_launcher.png" density="xxxhdpi" />
-    </platform>
+  </platform>
+  <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-feature
+          android:name="android.hardware.camera"
+          android:required="true" />
+  </config-file>
 </widget>

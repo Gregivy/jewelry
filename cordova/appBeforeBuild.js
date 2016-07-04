@@ -5,9 +5,9 @@ module.exports = function(ctx) {
     var fs = ctx.requireCordovaModule('fs'),
         path = ctx.requireCordovaModule('path'),
         deferral = ctx.requireCordovaModule('q').defer();
-    var platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android/');
-    console.log("gregivy1 - "+platformRoot);
-    var data = fs.readFileSync(platformRoot+'AndroidManifest.xml', 'utf-8').toString();
+    //var platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android/');
+    //console.log("gregivy1 - "+platformRoot);
+    var data = fs.readFileSync('tabris-android/bin/teAndroidManifest.xml', 'utf-8').toString();
     console.log("gregivy2 - "+data);
     var beforeManifest = data.split("<manifest")[0];
     var manifesttag = data.split("<manifest")[1].split(">")[0];
