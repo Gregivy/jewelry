@@ -35,7 +35,10 @@ var button = new tabris.Button({
 	/*var webview = new tabris.WebView({
 		  layoutData: {left: 0, top: [button,0], right: 0, bottom: 0}
 		}).set('url',"https://davidwalsh.name/demo/camera.php").appendTo(page);*/
-	cordova.InAppBrowser.open("https://davidwalsh.name/demo/camera.php","_blank","location=no");
+	//cordova.InAppBrowser.open("https://davidwalsh.name/demo/camera.php","_blank","location=no");
+	console.log(navigator.webkitGetUserMedia);
 }).appendTo(page);
+
+var cameraStream = new tabris.Canvas({ left: 0, top: [button,10], right: 0, bottom: 0 }).appendTo(page);
 
 page.open();
